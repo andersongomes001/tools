@@ -35,8 +35,11 @@ class Phpctfxor
     }
     private function getLeter($letra){
         $valido = false;
+        shuffle($this->letras);
         foreach ($this->letras as $a){
+            shuffle($this->letras);
             foreach ($this->letras as $b){
+                shuffle($this->letras);
                 foreach ($this->letras as $c){
                     if($letra === ( $a^$b^$c)){
                         if(($a != $b) and ($b != $c) and ($c != $a)){
@@ -56,5 +59,7 @@ class Phpctfxor
             }
         }
     }
+    private function array_ramdom(){
+        return shuffle($this->letras);
+    }
 }
-
