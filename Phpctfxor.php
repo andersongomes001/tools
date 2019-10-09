@@ -1,3 +1,4 @@
+<?php
 /**
  * Created by andersongomes001.
  * Date: 09/10/19
@@ -57,8 +58,5 @@ class Phpctfxor
                 break;
             }
         }
-    }
-    private function array_ramdom(){
-        return shuffle($this->letras);
     }
 }
