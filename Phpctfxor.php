@@ -23,7 +23,7 @@ class Phpctfxor
     private function run(){
         $p = str_split($this->palavra);
         foreach ($p as $l){
-            $this->getLeter($l);
+            $this->getLetra($l);
         }
         $this->getPayload();
     }
@@ -33,7 +33,7 @@ class Phpctfxor
         $c = implode($this->c);
         echo "{$this->palavra} = '{$a}'^'{$b}'^'{$c}'\n";
     }
-    private function getLeter($letra){
+    private function getLetra($letra){
         $valido = false;
         shuffle($this->letras);
         foreach ($this->letras as $a){
